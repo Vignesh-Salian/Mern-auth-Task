@@ -37,37 +37,20 @@ export default function Home() {
     navigate("/");
   };
 
-  if (loading) return <h2 className="loading">Checking authentication...</h2>;
+  if (loading) return <h2 className="loading">Authenticating...</h2>;
 
   return (
-    <div className="dashboard-container">
-      <aside className="sidebar">
-        <h2 className="sidebar-title">My Dashboard</h2>
-
-        <ul className="sidebar-menu">
-          <li>🏠 Home</li>
-          <li>⚙ Settings</li>
-        </ul>
+    <div className="home-container">
+      <div className="home-card">
+        <h1 className="home-title">Home Dashboard</h1>
+        <p className="home-welcome">
+          Welcome, <span>{user?.username}!</span>
+        </p>
 
         <button className="logout-btn" onClick={handleLogout}>
           Logout
         </button>
-      </aside>
-
-      <main className="dashboard-content">
-        <header className="dashboard-header">
-          <h1>Welcome, {user?.username}! 👋</h1>
-          <p>This is your simple, clean dashboard.</p>
-        </header>
-
-        <section className="info-section">
-          <h2>Dashboard Overview</h2>
-          <p>
-            This is a protected page. You can add charts, tables, links,
-            user activity, or any details here later whenever you need.
-          </p>
-        </section>
-      </main>
+      </div>
     </div>
   );
 }

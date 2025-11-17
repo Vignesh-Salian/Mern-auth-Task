@@ -1,117 +1,96 @@
-/* Auth page layout */
+/* ---- Container ---- */
 .auth-container {
   height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background: url("https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1400&q=80");
-  background-size: cover;
-  background-position: center;
-
-  backdrop-filter: blur(6px);
+  background: #f5f6fa;
   font-family: "Poppins", sans-serif;
 }
 
-/* Optional subtle animation */
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Card (login / signup box) */
+/* ---- Card ---- */
 .auth-box {
-  width: 350px;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 35px;
-  border-radius: 14px;
+  width: 360px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(3px);
 }
 
-/* Title & subtitle */
+/* ---- Titles ---- */
 .auth-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 5px;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 6px;
 }
 
 .auth-subtitle {
   font-size: 14px;
-  color: #555;
-  margin-bottom: 25px;
+  color: #666;
+  margin-bottom: 22px;
 }
 
-/* Form layout */
+/* ---- Form ---- */
 .auth-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 14px;
 }
 
-/* Inputs */
+/* ---- Inputs ---- */
 .auth-input {
   padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  border-radius: 6px;
+  border: 1px solid #d1d1d1;
+  font-size: 14px;
   outline: none;
-  font-size: 15px;
-  transition: 0.2s;
-  background: rgba(255, 255, 255, 0.9);
+  transition: border 0.2s;
 }
 
 .auth-input:focus {
   border-color: #4a4fff;
-  box-shadow: 0 0 6px rgba(74, 79, 255, 0.4);
 }
 
-/* Button */
+/* ---- Button ---- */
 .auth-btn {
   background: #4a4fff;
   border: none;
   padding: 12px;
-  color: white;
-  font-size: 16px;
-  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: background 0.2s;
 }
 
 .auth-btn:hover {
-  background: #373df0;
+  background: #3b3fe0;
 }
 
-/* Switch (login <-> signup) */
+/* ---- Switch (login / signup) ---- */
 .auth-switch {
   margin-top: 15px;
   font-size: 14px;
+  color: #444;
 }
 
 .auth-switch span {
   color: #4a4fff;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 500;
 }
 
-/* Error message */
+/* ---- Messages ---- */
 .auth-error {
-  color: red;
-  font-size: 14px;
-  margin-bottom: 10px;
+  color: #e63946;
+  font-size: 13px;
+  margin-bottom: 6px;
 }
 
-/* Success message */
 .auth-success {
-  color: green;
-  font-size: 14px;
-  margin-bottom: 10px;
+  color: #2a9d8f;
+  font-size: 13px;
+  margin-bottom: 6px;
 }
